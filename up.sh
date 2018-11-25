@@ -9,5 +9,7 @@ yum install puppet
 cd /etc/puppetlabs/code/environments/ 
 mv production production.back
 mkdir production
+cd-
+cp * /etc/puppetlabs/code/environments/production/
 cd /etc/puppetlabs/code/environments/production/
-echo git.pp >>  etc/puppetlabs/code/environments/production/manifests/site.pp
+echo manifests/git.pp >>  etc/puppetlabs/code/environments/production/manifests/site.pp
