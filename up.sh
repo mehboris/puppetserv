@@ -1,7 +1,13 @@
-wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
-sudo dpkg -i puppet5-release-xenial.deb
-sudo apt update
+ yum update
+ yum install nano
+ yum install epel-release
+ yum repolist
+ systemctl disable firewalld
+
 echo export PATH=/opt/puppetlabs/bin:'$PATH' >> ~/.bashrc 
-apt-get install puppet-agent
+yum install puppet
+cd /etc/puppetlabs/code/environments/ 
+mv production production.back
+mkdir production
 cd /etc/puppetlabs/code/environments/production/
 echo git.pp >>  etc/puppetlabs/code/environments/production/manifests/site.pp
