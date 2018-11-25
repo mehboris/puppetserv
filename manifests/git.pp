@@ -1,3 +1,6 @@
+#$dir_puppetstart='/home/git/repos/puppetstart.git'
+
+
 package {'git':
   ensure => installed
 }
@@ -39,3 +42,10 @@ exec { 'create-main-git-rep':
  command => '/usr/bin/git init --bare ',
  creates => '/home/git/repos/puppetstart.git/HEAD',
 }
+
+
+#exec { 'SYNC-main-git-rep':
+# cwd => '/root/pagent/', 
+# command => '/usr/bin/git remote remove origin && /usr/bin/git remote add origin $dir_puppetstart && git push -u origin master && echo "push" ',
+# creates => '/home/git/repos/puppetstart.git/HEAD',
+#}
