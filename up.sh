@@ -5,8 +5,8 @@ dir_puppetstart='/home/git/repos/puppetstart.git'
  yum repolist
  systemctl disable firewalld
 
-#echo export PATH=/opt/puppetlabs/bin:'$PATH' >> ~/.bashrc 
-#yum install puppet
+echo export PATH=/opt/puppetlabs/bin:'$PATH' >> ~/.bashrc 
+yum install puppet
 cd /etc/puppetlabs/code/environments/ 
 rm -rf production.back
 mv production production.back
