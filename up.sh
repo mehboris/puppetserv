@@ -1,4 +1,5 @@
 dir_puppetstart='/home/git/repos/puppetstart.git'
+sudo rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
  yum update
  yum install nano
  yum install epel-release
